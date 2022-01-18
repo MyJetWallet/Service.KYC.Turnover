@@ -56,36 +56,36 @@ namespace Service.KYC.Turnover.Jobs
                     await using var context = new DatabaseContext(_dbContextOptionsBuilder.Options);
                     await context.UpsertAsync(new[] { message });
 
-                    decimal depositedAmount = 0;
-                    var depositsGroups = context.Deposits.Where(t => t.ClientId == message.ClientId).GroupBy(t => t.AssetSymbol).Select(deposits=> new
-                    {
-                        Asset = deposits.Key,
-                        Amount = deposits.Sum(deposit=>deposit.Amount)
-                    });
-                    foreach (var depositsGroup in depositsGroups)
-                    {
-                        var price = _indexPricesClient.GetConvertIndexPriceByPairAsync(depositsGroup.Asset, _settings.LimitAsset).Price;
-
-                        depositedAmount += depositsGroup.Amount * price;
-                    }
-
-                    if (depositedAmount >= _settings.LimitLevel2 && depositedAmount < _settings.LimitLevel3)
-                    {
-                        await _publisher.PublishAsync(new KycLevelUpdateMessage()
-                        {
-                            ClientId = message.ClientId,
-                            KycLevel = KycLevel.Level2
-                        });
-                    }
-
-                    if (depositedAmount >= _settings.LimitLevel3)
-                    {
-                        await _publisher.PublishAsync(new KycLevelUpdateMessage()
-                        {
-                            ClientId = message.ClientId,
-                            KycLevel = KycLevel.Level3
-                        });
-                    }                
+                    // decimal depositedAmount = 0;
+                    // var depositsGroups = context.Deposits.Where(t => t.ClientId == message.ClientId).GroupBy(t => t.AssetSymbol).Select(deposits=> new
+                    // {
+                    //     Asset = deposits.Key,
+                    //     Amount = deposits.Sum(deposit=>deposit.Amount)
+                    // });
+                    // foreach (var depositsGroup in depositsGroups)
+                    // {
+                    //     var price = _indexPricesClient.GetConvertIndexPriceByPairAsync(depositsGroup.Asset, _settings.LimitAsset).Price;
+                    //
+                    //     depositedAmount += depositsGroup.Amount * price;
+                    // }
+                    //
+                    // if (depositedAmount >= _settings.LimitLevel2 && depositedAmount < _settings.LimitLevel3)
+                    // {
+                    //     await _publisher.PublishAsync(new KycLevelUpdateMessage()
+                    //     {
+                    //         ClientId = message.ClientId,
+                    //         KycLevel = KycLevel.Level2
+                    //     });
+                    // }
+                    //
+                    // if (depositedAmount >= _settings.LimitLevel3)
+                    // {
+                    //     await _publisher.PublishAsync(new KycLevelUpdateMessage()
+                    //     {
+                    //         ClientId = message.ClientId,
+                    //         KycLevel = KycLevel.Level3
+                    //     });
+                    // }                
                 }
             }
             catch (Exception e)
