@@ -3,19 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.KYC.Turnover", "src\Service.KYC.Turnover\Service.KYC.Turnover.csproj", "{740DF849-06AA-448E-8B09-91ECA236A051}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Client.Turnover", "src\Service.Client.Turnover\Service.Client.Turnover.csproj", "{740DF849-06AA-448E-8B09-91ECA236A051}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApp", "test\TestApp\TestApp.csproj", "{58D3C5BA-5D1D-48BA-9D51-482831254985}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.KYC.Turnover.Grpc", "src\Service.KYC.Turnover.Grpc\Service.KYC.Turnover.Grpc.csproj", "{A9A2F2A9-1B5B-40D1-8DD2-6C1D776FB6BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Client.Turnover.Grpc", "src\Service.Client.Turnover.Grpc\Service.Client.Turnover.Grpc.csproj", "{A9A2F2A9-1B5B-40D1-8DD2-6C1D776FB6BC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.KYC.Turnover.Domain.Models", "src\Service.KYC.Turnover.Domain.Models\Service.KYC.Turnover.Domain.Models.csproj", "{5FAB1BBA-DE6F-4189-8CF0-D4D77D9C660B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Client.Turnover.Domain.Models", "src\Service.Client.Turnover.Domain.Models\Service.Client.Turnover.Domain.Models.csproj", "{5FAB1BBA-DE6F-4189-8CF0-D4D77D9C660B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Domain", "01. Domain", "{446301A0-97F2-4921-BA0B-32B76039C73B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10. Test", "10. Test", "{D11EB899-A148-4C9B-B340-B907EF71C4A2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.KYC.Turnover.Client", "src\Service.KYC.Turnover.Client\Service.KYC.Turnover.Client.csproj", "{B64315EC-2356-4586-8A89-111D88A942B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Client.Turnover.Client", "src\Service.Client.Turnover.Client\Service.Client.Turnover.Client.csproj", "{B64315EC-2356-4586-8A89-111D88A942B8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Client", "05. Client", "{EB832FF1-4E01-40ED-BAC4-5ECF70F5C108}"
 EndProject
@@ -30,9 +30,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.github\workflows\update_nuget.yaml = .github\workflows\update_nuget.yaml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.KYC.Turnover.Domain", "src\Service.KYC.Turnover.Domain\Service.KYC.Turnover.Domain.csproj", "{5CFE74A4-CDBB-4E2D-9C0A-9CEF20DCB38B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Client.Turnover.Domain", "src\Service.Client.Turnover.Domain\Service.Client.Turnover.Domain.csproj", "{5CFE74A4-CDBB-4E2D-9C0A-9CEF20DCB38B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.KYC.Turnover.Postgres", "src\Service.KYC.Turnover.Postgres\Service.KYC.Turnover.Postgres.csproj", "{68DE3440-0F8F-4660-901E-FA1456C27033}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service.Client.Turnover.Postgres", "src\Service.Client.Turnover.Postgres\Service.Client.Turnover.Postgres.csproj", "{68DE3440-0F8F-4660-901E-FA1456C27033}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Service.KYC.Turnover.Client\Service.KYC.Turnover.Client.csproj" />
-    <ProjectReference Include="..\..\src\Service.KYC.Turnover.Grpc\Service.KYC.Turnover.Grpc.csproj" />
+    <ProjectReference Include="..\..\src\Service.Client.Turnover.Client\Service.Client.Turnover.Client.csproj" />
+    <ProjectReference Include="..\..\src\Service.Client.Turnover.Grpc\Service.Client.Turnover.Grpc.csproj" />
   </ItemGroup>
 
 </Project>
