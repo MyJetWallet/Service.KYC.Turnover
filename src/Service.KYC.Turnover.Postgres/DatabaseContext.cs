@@ -31,6 +31,7 @@ namespace Service.KYC.Turnover.Postgres
             modelBuilder.Entity<Deposit>().HasKey(e =>e.Id);
             
             modelBuilder.Entity<Deposit>().Property(e =>e.LastError).IsRequired(false);
+            modelBuilder.Entity<Deposit>().Property(e =>e.CardLast4).IsRequired(false);
 
             modelBuilder.Entity<Deposit>().HasIndex(e => e.ClientId);
             modelBuilder.Entity<Deposit>().HasIndex(e => e.WalletId);
