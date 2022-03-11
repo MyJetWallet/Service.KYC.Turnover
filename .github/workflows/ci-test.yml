@@ -32,7 +32,7 @@ jobs:
       run: ls
 
     - name: Publish Service
-      run: dotnet publish --no-build ./src/Service.KYC.Turnover/Service.Client.Turnover.csproj --configuration Release --output ./publish-api
+      run: dotnet publish --no-build ./src/Service.KYC.Turnover/Service.KYC.Turnover.csproj --configuration Release --output ./publish-api
 
     - name: Check Service dir
       run: ls ./publish-api

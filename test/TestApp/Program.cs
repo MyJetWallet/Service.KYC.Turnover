@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using ProtoBuf.Grpc.Client;
-using Service.Client.Turnover.Client;
-using Service.Client.Turnover.Grpc.Models;
+using Service.KYC.Turnover.Client;
+using Service.KYC.Turnover.Grpc.Models;
 
 namespace TestApp
 {
@@ -16,7 +16,7 @@ namespace TestApp
             Console.ReadLine();
 
 
-            var factory = new TurnoverClientFactory("http://localhost:5001");
+            var factory = new KYCTurnoverClientFactory("http://localhost:5001");
             var client = factory.GetHelloService();
 
             var resp = await  client.SayHelloAsync(new HelloRequest(){Name = "Alex"});
