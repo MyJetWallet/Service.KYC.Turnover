@@ -22,7 +22,7 @@ namespace Service.KYC.Turnover.Postgres.Migrations
                 schema: "kycturnover",
                 table: "deposits",
                 type: "jsonb",
-                nullable: false);
+                nullable: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

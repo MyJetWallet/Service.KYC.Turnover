@@ -85,7 +85,6 @@ namespace Service.KYC.Turnover.Postgres.Migrations
                         .HasColumnType("integer");
 
                     b.Property<SimplexData>("SimplexData")
-                        .IsRequired()
                         .HasColumnType("jsonb");
 
                     b.Property<int>("Status")
