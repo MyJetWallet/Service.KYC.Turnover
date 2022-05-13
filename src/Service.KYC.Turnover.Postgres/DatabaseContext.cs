@@ -33,6 +33,7 @@ namespace Service.KYC.Turnover.Postgres
             modelBuilder.Entity<Deposit>().Property(e =>e.LastError).IsRequired(false);
             modelBuilder.Entity<Deposit>().Property(e =>e.CardLast4).IsRequired(false);
             modelBuilder.Entity<Deposit>().Property(e =>e.Network).IsRequired(false);
+            modelBuilder.Entity<Deposit>().Property(e =>e.SimplexData).HasColumnType("jsonb");
 
             modelBuilder.Entity<Deposit>().HasIndex(e => e.ClientId);
             modelBuilder.Entity<Deposit>().HasIndex(e => e.WalletId);
